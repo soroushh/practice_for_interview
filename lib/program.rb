@@ -1,7 +1,9 @@
-i = 1
-while i <= ARGV[0].to_i
-  if ARGV[0].to_i % i == 0
-    p(i)
+class Entering
+  def is_prime(a, be_prime = true, counter = 2)
+    while counter < a
+      be_prime = false if a % counter == 0
+      counter += 1
+    end
+    return(be_prime)
   end
-  i += 1
 end
